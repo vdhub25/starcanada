@@ -1,0 +1,116 @@
+@import '../../variables.scss';
+.ehub-contact {
+    h1 {
+        color: $active;
+    }
+    .ehub-contact-form {
+        height: auto;
+        p {
+            font-family: $font-family-medium;
+        }
+        .form-hldr {
+            max-width: 500px;
+            margin: 10px auto;
+            padding: 20px 5px;
+            background: $white;
+            box-shadow: 0 3px 6px 0 black;
+            form {
+                max-width: 350px;
+                margin: 0 auto;
+                .form-feilds {
+                    width: 100%;
+                    position: relative;
+                    height: 50px;
+                    overflow: hidden;
+                    margin: 0 auto;
+                    input {
+                        width: 100%;
+                        height: 100%;
+                        color: $primary;
+                        padding: 20px 0;
+                        border: none;
+                        outline: none;
+                        font-family: $font-family-medium;
+                        &:focus+.label-name {
+                            bottom: -2px;
+                            .content-name {
+                                transform: translatey(-100%);
+                                font-size: 14px;
+                                color: $primary;
+                            }
+                            &:after {
+                                transform: translateX(0%);
+                            }
+                        }
+                        &:valid+.label-name {
+                            bottom: 0px;
+                            .content-name {
+                                transform: translatey(-150%);
+                                font-size: 14px;
+                                color: $primary;
+                            }
+                            &:after {
+                                transform: translateX(0%);
+                            }
+                        }
+                        &.has-error {
+                            &+.label-name {
+                                border-bottom: 1px solid $error;
+                                .content-name {
+                                    color: $error;
+                                }
+                            }
+                        }
+                    }
+                    .label-name {
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        pointer-events: none;
+                        border-bottom: 1px solid black;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: -1px;
+                            height: 100%;
+                            width: 100%;
+                            border-bottom: 3px solid $primary;
+                            transform: translatex(-100%);
+                            transition: all 0.3s ease;
+                        }
+                        .content-name {
+                            position: absolute;
+                            bottom: 5px;
+                            left: 0;
+                            transition: all 0.3s ease;
+                            font-family: $font-family-medium;
+                        }
+                    }
+                }
+                .submit-btn {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    border-radius: 20px;
+                    margin: 10px auto;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    color: $white;
+                    font-family: $font-family-medium;
+                    background-image: linear-gradient(to right, #1e0040, #4b0138, #1b033b);
+                    background-size: 200%;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        background-position: right;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@import '../../variables.scss';
+@import '../payment/payment.component.scss';
+.bond-group-join {
+    h1 {
+        color: $active;
+    }
+    @media(min-width: $min-width-md) {
+        .overlay {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #000;
+            opacity: 0.8;
+            z-index: 1;
+        }
+    }
+    .join-desc {
+        max-width: 500px;
+        @media(min-width: $min-width-md) {
+            position: absolute;
+            color: #fff;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+        @media(max-width: $max-width-md) {
+            position: static;
+        }
+        h3 {
+            @media(min-width: $min-width-md) {
+                color: $white;
+            }
+        }
+    }
+    .btn-primary {
+        margin: 10px auto 25px;
+        display: block;
+        width: 150px;
+    }
+}

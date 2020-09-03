@@ -1,0 +1,48 @@
+@import "../../variables.scss";
+.main-banner {
+    .video-banner {
+        min-height: 400px;
+        @media(min-width: $min-width-md) {
+            min-height: 450px;
+        }
+        @media(min-width: $min-width-lg) {
+            min-height: 600px;
+        }
+        .video-wrapper {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            video {
+                width: 100%;
+            }
+            img {
+                @media(max-width: $max-width-md) {
+                    height: 100%;
+                }
+            }
+        }
+        .video-overlay {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #000;
+            opacity: 0.8;
+            z-index: 1;
+            // @media(max-width: $max-width-md) {
+            //     opacity: 1;
+            // }
+        }
+        .video-content {
+            z-index: 2;
+            h1,
+            p {
+                color: $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import '../../variables.scss';
+.company-facts {
+    h3 {
+        font-weight: bold;
+    }
+    .number-color {
+        font-weight: bold;
+        color: $active;
+        font-size: 55px;
+        line-height: 55px;
+        margin-bottom: 6px;
+    }
+    p {
+        font-weight: bold;
+        font-size: 20px;
+    }
+}

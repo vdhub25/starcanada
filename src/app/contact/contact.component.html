@@ -1,0 +1,68 @@
+<div class="common-bond-group">
+    <div class="ehub-contact  py-4">
+        <h1 class="text-center">Contact Us</h1>
+        <div class="ehub-contact-form d-flex flex-column justify-content-around  align-items-center py-4">
+            <div class="container">
+                <div class="form-hldr">
+                    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                        <div class="d-flex flex-column flex-md-row">
+                            <div class=" my-3 my-md-1 mr-md-1">
+                                <div class="form-feilds">
+                                    <input type="text" name="fname" autocomplete="off" required formControlName="fname" [ngClass]="displayFieldCss('fname')" />
+                                    <label for="fname" class="label-name">
+                                    <span class="content-name"><i class="fa fa-user mr-2"></i>firstname</span>
+                                </label>
+                                </div>
+                                <app-contact-error [displayError]="isFieldValid('fname')" errorMsg="Firstname please">
+                                </app-contact-error>
+                            </div>
+                            <div class=" my-3 my-md-1 mr-md-1">
+                                <div class="form-feilds">
+                                    <input type="text" name="lname" autocomplete="off" required formControlName="lname" [ngClass]="displayFieldCss('lname')" />
+                                    <label for="lname" class="label-name">
+                                        <span class="content-name"><i class="fa fa-user mr-2"></i>lastname</span>
+                                    </label>
+                                </div>
+                                <app-contact-error [displayError]="isFieldValid('lname')" errorMsg="lastname please">
+                                </app-contact-error>
+                            </div>
+                        </div>
+                        <div class="my-3">
+                            <div class="form-feilds">
+                                <input type="text" name="phone" autocomplete="off" required formControlName="phone" [ngClass]="displayFieldCss('phone')" />
+                                <label for="phone" class="label-name">
+                                    <span class="content-name"><i class="fa fa-phone mr-2"></i>Phone</span>
+                                </label>
+                            </div>
+                            <app-contact-error [displayError]="isFieldValid('phone')" errorMsg="mobile number please">
+                            </app-contact-error>
+                        </div>
+                        <div class="my-3">
+                            <div class="form-feilds">
+                                <input type="text" name="email" autocomplete="off" required formControlName="email" [ngClass]="displayFieldCss('email')" />
+                                <label for="email" class="label-name">
+                                    <span class="content-name"><i class="fa fa-envelope mr-2"></i>email</span>
+                                </label>
+                            </div>
+                            <app-contact-error [displayError]="isFieldValid('email')" errorMsg="Email Id please">
+                            </app-contact-error>
+                        </div>
+                        <div class="my-3">
+                            <div class="form-feilds">
+                                <input type="text" name="msg" required formControlName="msg" [ngClass]="displayFieldCss('msg')" />
+                                <label for="msg" class="label-name">
+                                    <span class="content-name"><i class="fa fa-folder-open mr-2"></i>Message</span>
+                                </label>
+                            </div>
+                            <app-contact-error [displayError]="isFieldValid('msg')" errorMsg="leave your message">
+                            </app-contact-error>
+                        </div>
+
+                        <button [disabled]="!form.valid" class="btn submit-btn " type="submit ">Contact Us</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

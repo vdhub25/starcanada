@@ -1,0 +1,47 @@
+@import '../../variables.scss';
+.core-values {
+    h2 {
+        color: $active;
+    }
+    .corevalues-slider {
+        .slider-items {
+            .core-values-hldr {
+                -webkit-box-shadow: 0 3px 6px 0 rgba(140, 152, 164, 0.25);
+                box-shadow: 0 3px 6px 0 rgba(140, 152, 164, 0.25);
+                -webkit-transition: 0.3s ease;
+                -o-transition: 0.3s ease;
+                transition: 0.3s ease;
+                padding: 10px;
+                background: #fff;
+                border-radius: 50%;
+                max-width: 300px;
+                max-height: 300px;
+                margin: 0 auto;
+                @media(min-width: $min-width-md) {
+                    max-width: 400px;
+                    max-height: 400px;
+                    height: 320px;
+                    width: 320px;
+                }
+                &.account {
+                    border: 5px solid green;
+                }
+                &.honest {
+                    border: 5px solid orange;
+                }
+                &.service {
+                    border: 5px solid #150814;
+                }
+                p {
+                    font-size: 12px;
+                    @media(min-width: $min-width-md) {
+                        font-size: 14px;
+                    }
+                }
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

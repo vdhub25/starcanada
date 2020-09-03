@@ -1,0 +1,43 @@
+@import "../../variables.scss";
+.bond-group-home {
+    h2 {
+        color: $active;
+    }
+    .home-products {
+        .home-products-hldr {
+            -webkit-box-shadow: 0 3px 6px 0 rgba(140, 152, 164, 0.25);
+            box-shadow: 0 3px 6px 0 rgba(140, 152, 164, 0.25);
+            -webkit-transition: 0.3s ease;
+            -o-transition: 0.3s ease;
+            transition: 0.3s ease;
+            padding: 10px;
+            background: #fff;
+            h6 {
+                margin-bottom: 20px;
+            }
+            img {
+                width: 100%;
+                padding: 20px;
+            }
+            p {
+                font-family: $font-family-light;
+                a {
+                    color: $active;
+                    text-decoration: underline;
+                    font-family: $font-family-medium;
+                    display: block;
+                }
+            }
+            &:hover {
+                transform: scale(1.05);
+                transition: 0.3s ease;
+            }
+        }
+        a {
+            margin: 10px auto 25px;
+            display: block;
+            width: 150px;
+            text-decoration: none;
+        }
+    }
+}

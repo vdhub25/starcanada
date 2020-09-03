@@ -1,0 +1,53 @@
+@import '../../variables.scss';
+.testimonial {
+    // max-width: 900px;
+    // margin: 0 auto;
+    // width: 100%;
+    .home-testimonial-slider {
+        .slider-items {
+            // box-shadow: 0 3px 6px 0 rgba(140, 152, 164, 0.25);
+            padding: 10px;
+            background: $white;
+            &>div {
+                box-shadow: 0 3px 6px 0 rgba(140, 152, 164, 0.25);
+                padding: 10px;
+                background: $white;
+                // @media(max-width: $max-width-md) {
+                //     margin: 20px;
+                // }
+                h6 {
+                    word-break: break-all;
+                    margin-bottom: 10px;
+                    @media(min-width: $min-width-md) {
+                        min-height: 55px;
+                    }
+                    @media(min-width:$min-width-lg) {
+                        min-height: 55px;
+                    }
+                    @media(min-width:$min-width-xl) {
+                        min-height: 55px;
+                    }
+                }
+                p {
+                    font-size: 13px;
+                    @media(min-width: $min-width-md) {
+                        min-height: 133px;
+                    }
+                    @media(min-width:$min-width-lg) {
+                        min-height: 152px;
+                    }
+                    @media(min-width:$min-width-xl) {
+                        min-height: 115px;
+                    }
+                }
+                h4 {
+                    color: $active;
+                    font-size: 20px;
+                }
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

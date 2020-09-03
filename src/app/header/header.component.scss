@@ -1,0 +1,128 @@
+@import "../../variables.scss";
+header {
+    nav {
+        background: $primary;
+        z-index: 3;
+        box-shadow: 2px 2px 12px 0 $primary;
+        &.navbar_change {
+            background-color: $white;
+            ul {
+                li {
+                    a {
+                        color: $primary;
+                        &.online-payment {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            .variable-logo-width {
+                .after-scroll {
+                    display: block;
+                }
+                .before-scroll {
+                    display: none;
+                }
+                span {
+                    color: $active;
+                }
+            }
+        }
+        .variable-logo-width {
+            width: 100%;
+            @media(min-width: $min-width-md) {
+                width: auto;
+            }
+            img {
+                position: relative;
+                width: 200px;
+                // @media(min-width: $min-width-md) {}
+            }
+            .after-scroll {
+                display: none;
+            }
+            .before-scroll {
+                display: block;
+            }
+            span {
+                position: absolute;
+                bottom: 0;
+                font-family: $font-family-medium;
+                text-transform: uppercase;
+                color: $white;
+                font-size: 12px;
+                @media(min-width: $min-width-md) {
+                    font-size: 15px;
+                }
+            }
+        }
+        .navbar-toggler {
+            color: $active;
+            font-size: 25px;
+            background: transparent;
+        }
+        ul {
+            li {
+                a {
+                    color: $white;
+                    font-family: $font-family-medium;
+                    text-decoration: none;
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                    display: block;
+                    @media(min-width: $min-width-md) {
+                        margin-left: 20px;
+                        margin-bottom: 0;
+                        font-size: 12px;
+                    }
+                    @media(min-width: $min-width-lg) {
+                        font-size: 18px;
+                    }
+                    &.active {
+                        color: $active;
+                        font-weight: bold;
+                        &.online-payment {
+                            color: $white;
+                            outline: 0;
+                            box-shadow: none;
+                        }
+                    }
+                }
+                ul {
+                    width: 300px;
+                    background: $primary;
+                    li {
+                        border-bottom: 1px solid $white;
+                        a {
+                            margin-left: 0;
+                            color: $white;
+                            padding: 6px;
+                            font-size: 15px;
+                            &:hover {
+                                color: $active;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .navbar-nav li:hover>ul.dropdown-menu {
+        display: block;
+        width: 320px;
+        padding: 10px;
+        li {
+            a {
+                &:hover {
+                    color: $active;
+                    padding-left: 20px;
+                    transition: 0.3s ease-in;
+                    display: block;
+                    transform: scale(1.15);
+                    font-weight: bold;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

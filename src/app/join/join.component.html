@@ -1,0 +1,65 @@
+<div class="common-bond-group">
+    <div class="top-bg-block">
+        <div class="top-bg-img">
+
+        </div>
+        <div class="top-overlay"></div>
+        <div class="top-bg-heading">
+            <div class="container">
+                <h1>What To Expect</h1>
+            </div>
+        </div>
+
+    </div>
+    <div class="bond-group-join py-4">
+        <div class="container">
+            <div class="heading-border">
+                <h3>Moving Day</h3>
+            </div>
+            <p>The big day is finally here! Learn what to expect for a smooth moving experience, and how to avoid some common mistakes on the day of the move.</p>
+            <div class="heading-border">
+                <h3>Arrival</h3>
+            </div>
+            <p>Generally, we expect to arrive on time. There are times we may have to account for traffic and sometimes it require a lot of time to find parking. We may not always arrive in your home at the estimated time.</p>
+            <div class="heading-border">
+                <h3>Communications</h3>
+            </div>
+            <p>We’ll provide real time updates on the go. We communicate with you the day before, during and after the move by phone. If there are any issues with the move, expect us to resolve them to 100% satisfaction.</p>
+            <div class="heading-border">
+                <h3>Preparations</h3>
+            </div>
+            <p>Mark and set aside items you want loaded and items you don’t want loaded in the truck. When our movers examine your space, it would be helpful if they know where things are so we can take the corresponding items to each room in the new location.</p>
+            <ul>
+                <li>If you pack your boxes yourself, make sure you pack your boxes well – see how to pack a box</li>
+                <li>Once all the paperwork is complete, our movers will first remove all the boxes to create space, then the big furnitures gets wrapped, protected and loaded on the truck</li>
+                <li>There is a lot of prep work and strategy involved – we don’t just put things on the truck randomly</li>
+            </ul>
+            <div class="heading-border">
+                <h3>Packing</h3>
+            </div>
+            <p>We use recycled packing paper and environmental friendly materials. We also encourage our customers to use BOXUP MOVING BINS , a local green moving supply company.</p>
+            <div class="row flex-column flex-md-row align-items-center p-3 pb-5">
+                <div class="col">
+                    <figure class="m-md-0">
+                        <img src="../../assets/images/home/dummy-img.png" alt="" />
+                    </figure>
+                </div>
+                <div class="col">
+                    <div>
+                        <h3>The Bond Group Plan Membership Privilege</h3>
+                        <p>
+                            Each client/ member in the Bond Group Plan is offered equitable custom-tailored financial advice. We provide an in-depth and outgoing process resulting in solutions that reflect your objectives at every stage of life. Through comprehensive information
+                            gathering, asset management, analysis, decision-making and evaluation, we provide you with a world class individualized Bond Group Plan.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-primary text-white text-center" (click)="paymentBlock()"><span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Join Us</a>
+
+            <div *ngIf="payment" [ngClass]="{'lock-in ': payment, 'lock-outs': !payment}">
+                <app-payment></app-payment>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<header class="bond-group-nav">
+    <nav class="navbar navbar-expand-md position-fixed w-100" [class.navbar_change]="navbar_variable">
+        <div class="container">
+            <div class="position-relative variable-logo-width">
+                <div class="d-flex align-items-center justify-content-between">
+                    <a class="navbar-brand active" routerLink="/home">
+                        <img class="after-scroll" src="../../assets/images/logo/star-canada-movers.png" alt="">
+                        <img class="before-scroll" src="../../assets/images/logo/star-canada-movers-white.png" alt="">
+                        <!-- <span>Star Canada Movers</span> -->
+                    </a>
+                    <a class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+                        <i class="fa" [ngClass]="{'fa-bars ': isMenuCollapsed, 'fa-close ': !isMenuCollapsed}"></i>
+                    </a>
+                </div>
+            </div>
+            <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav align-items-center">
+                    <li>
+                        <a (click)="isMenuCollapsed = true" routerLinkActive="active" routerLink="about">About</a>
+                    </li>
+                    <li class="nav-item dropdown services-list">
+                        <a class="dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLinkActive="active" routerLink="services">Services</a>
+                        <ul class="dropdown-menu inner-services" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a (click)="isMenuCollapsed = true" routerLink="services/localmovers" routerLinkActive="active">Local/Long Distance moving</a>
+                            </li>
+                            <li>
+                                <a (click)="isMenuCollapsed = true" routerLink="services/junkremoval" routerLinkActive="active">Junk Removal</a>
+                            </li>
+                            <li>
+                                <a (click)="isMenuCollapsed = true" routerLink="services/pianomoving" routerLinkActive="active">Piono Moving</a>
+                            </li>
+                            <li>
+                                <a (click)="isMenuCollapsed = true" routerLink="services/buildingmoving" routerLinkActive="active">Office and Building Moving</a>
+                            </li>
+                            <!-- <li>
+                                <a (click)="isMenuCollapsed = true" routerLink="services/distancemoving" routerLinkActive="active">Long Distance moving</a>
+                            </li> -->
+                            <li>
+                                <a (click)="isMenuCollapsed = true" routerLink="services/residencemoving" routerLinkActive="active">Recidence Moving</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a (click)="isMenuCollapsed = true" routerLinkActive="active" routerLink="resources">Resources</a>
+                    </li>
+                    <li>
+                        <a (click)="isMenuCollapsed = true" routerLinkActive="active" routerLink="contact">Contact Us</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-primary online-payment" (click)="isMenuCollapsed = true" routerLinkActive="active" routerLink="payment">Online Payment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,49 @@
+@import "../../variables.scss";
+footer {
+    background: $primary;
+    font-family: $font-family-light;
+    .footer-heading {
+        border-left: solid 3px;
+        border-left-color: #be282b;
+        border-right-color: #be282b;
+        line-height: 26px;
+        padding: 0 0 0 20px;
+        margin-bottom: 25px;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+    ul {
+        li {
+            color: $white;
+            font-size: 13px;
+            margin-bottom: 10px;
+            position: relative;
+            a {
+                color: $white;
+                font-size: 13px;
+                text-decoration: none;
+                margin-left: 12px;
+                &:after {
+                    content: "\f0da";
+                    font-family: fontawesome;
+                    display: inline-block;
+                    font-size: inherit;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    padding-right: 10px;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+    }
+    p {
+        color: $white;
+        font-size: 13px;
+        margin-bottom: 10px;
+        span {
+            display: block;
+        }
+    }
+}

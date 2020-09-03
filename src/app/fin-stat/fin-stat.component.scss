@@ -1,0 +1,18 @@
+@import '../home/home.component.scss';
+.bond-group-Strategy {
+    h1 {
+        color: $active;
+    }
+    p {
+        span {
+            display: block;
+        }
+        &.address {
+            color: $heading;
+        }
+    }
+    small {
+        display: block;
+        max-width: 360px;
+    }
+}

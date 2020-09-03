@@ -1,0 +1,74 @@
+<div class="quote-request">
+    <div class="container">
+        <div class="main-heading-border  text-center my-4 pt-4">
+            <h3 class="text-center text-uppercase">Request a Quote</h3>
+        </div>
+
+        <form class="request-quote-form w-100" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-md-6 mb-2 form-group">
+                    <label for="name" class="required">Name</label>
+                    <input type="text" class="form-control" id="name" formControlName="name" [ngClass]="displayFieldCss('name')" />
+                    <app-quote-error [displayError]="isFieldValid('name')" errorMsg="Please Enter Your Name">
+                    </app-quote-error>
+                </div>
+                <div class="col-md-6 mb-2 form-group">
+                    <label for="email" class="required">Email</label>
+                    <input type="text" class="form-control" id="email" formControlName="email" [ngClass]="displayFieldCss('email')" />
+                    <app-quote-error [displayError]="isFieldValid('email')" errorMsg="Please Enter Email">
+                    </app-quote-error>
+                </div>
+                <div class="col-md-6 mb-2 form-group">
+                    <label for="mobile" class="required">Mobile</label>
+                    <input type="text" class="form-control" id="mobile" formControlName="mobile" [ngClass]="displayFieldCss('mobile')" />
+                    <app-quote-error [displayError]="isFieldValid('mobile')" errorMsg="Please Enter Mobile Number">
+                    </app-quote-error>
+                </div>
+                <div class="col-md-6 mb-2 form-group">
+                    <label for="moveto" class="required">Move To</label>
+                    <input type="text" class="form-control" id="moveto" formControlName="moveto" [ngClass]="displayFieldCss('moveto')" />
+                    <app-quote-error [displayError]="isFieldValid('moveto')" errorMsg="Please Enter where you are moving to">
+                    </app-quote-error>
+                </div>
+                <div class="col-md-6 mb-2 form-group">
+                    <label for="movefrom" class="required">Move From</label>
+                    <input type="text" class="form-control" id="movefrom" formControlName="movefrom" [ngClass]="displayFieldCss('movefrom')" />
+                    <app-quote-error [displayError]="isFieldValid('movefrom')" errorMsg="Please Enter where you are moving from">
+                    </app-quote-error>
+                </div>
+                <div class="col-md-6 mb-2 form-group">
+                    <label for="torecidencetype" class="required"> Move From Residence Type:</label>
+                    <select [(ngModel)]="todefaultoption" class="form-control" formControlName="torecidencetype" (change)="toRecidence($event)" [ngClass]="displayFieldCss('torecidencetype')">
+                      <option *ngFor="let option of torecidencetype" [value] ="option" [selected]="option == 'Room (Share)'">{{option}}</option>
+                    </select>
+                    <app-quote-error [displayError]="isFieldValid('torecidencetype')" errorMsg="Please Enter Type of Recidence">
+                    </app-quote-error>
+                </div>
+                <div class="col-md-6 mb-2 form-group">
+                    <label for="fromrecidencetype" class="required"> Move From Residence Type:</label>
+                    <select [(ngModel)]="fromdefaultoption" class="form-control" formControlName="fromrecidencetype" (change)="fromRecidence($event)" [ngClass]="displayFieldCss('fromrecidencetype')">
+                    <option *ngFor="let option of fromrecidencetype" [value] ="option" [selected]="option == 'Room (Share)'">{{option}}</option>
+                  </select>
+                    <app-quote-error [displayError]="isFieldValid('fromrecidencetype')" errorMsg="Please Enter Type of Recidence">
+                    </app-quote-error>
+                </div>
+                <div class="col-md-6 mb-2 form-group">
+                    <label for="datepicker" class="required"> Move Date</label>
+                    <ejs-datepicker #ejDatePicker class="form-control" [value]='dateValue' formControlName="datepicker" id="datepicker" [ngClass]="displayFieldCss('datepicker')"></ejs-datepicker>
+
+                    <app-quote-error [displayError]="isFieldValid('datepicker')" errorMsg="Please Enter valid date">
+                    </app-quote-error>
+                </div>
+
+                <div class="col-md-12 mb-2 form-group">
+                    <label for="textarea" class="required">Message</label>
+                    <textarea class="form-control" formControlName="textarea" rows="10" cols="30" onfocus="this.value = this.value;" id="textarea" [ngClass]="displayFieldCss('textarea')">
+                    </textarea>
+                    <app-quote-error [displayError]="isFieldValid('textarea')" errorMsg="Please Enter valid date">
+                    </app-quote-error>
+                </div>
+                <button [disabled]="!form.valid" type="submit" class="submit btn btn-primary">submit</button>
+            </div>
+        </form>
+    </div>
+</div>
